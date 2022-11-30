@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESercizio</title>
+		
+		<!-- librerie terze parti -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<!-- Favicon -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+		<!-- Bootstrap e mio css -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div id="app">
+
+      <h1 class="text-center py-3">ESercizio con Axios</h1>
+      <h2 class="text-center py-3">lista creata dinamicamente alla risposta del server</h2>
+      
+     <div v-for="email in listaEmail">
+        <h4 class="ps-4">{{email}}</h4>
+      
+      </div>
+
+      <h2 class="text-center py-3">lista creata dinamicamente quando il valore dell'array é di n.10 elementi tramite if in HTML</h2>
+
+      <div v-if="(listaEmail2.length === 10)" v-for="email in listaEmail2">
+        <h4 class="ps-4">{{email}}</h4>
+      
+      </div>
+
+
+      <h2 class="text-center py-3">lista creata dinamicamente quando il valore dell'array é di n.10 elementi tramite js</h2>
+
+      <div  v-for="email in listaEmail3">
+        <h4 class="ps-4">{{email}}</h4>
+      
+      </div>
+
+
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
